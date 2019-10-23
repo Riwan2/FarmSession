@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<XmlGameFile>
+  <playerFile>
+    <PosX>497.4495</PosX>
+    <PosY>552.0013</PosY>
+  </playerFile>
+  <gameInfo>
+    <Time>20</Time>
+    <CurrentMap>PlayerLevel</CurrentMap>
+  </gameInfo>
+  <inventoryFile>
+    <Item index="0">
+      <ID>BASEBATON</ID>
+      <Slot>0</Slot>
+    </Item>
+    <Item index="1">
+      <ID>SCYTHE</ID>
+      <Slot>1</Slot>
+    </Item>
+    <Item index="2">
+      <ID>WHEAT</ID>
+      <Number>40</Number>
+      <Slot>2</Slot>
+    </Item>
+    <Item index="3">
+      <ID>WHEATSEED</ID>
+      <Number>1</Number>
+      <Slot>3</Slot>
+    </Item>
+  </inventoryFile>
+</XmlGameFile>

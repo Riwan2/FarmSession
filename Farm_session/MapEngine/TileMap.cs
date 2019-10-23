@@ -33,6 +33,7 @@ namespace Farming_session
 
 		//Collision
 		public static List<Rectangle> LstCollision;
+		public static int[] BitMap;
 
 		//PathFinding
 		public static Grid CurrentGrid;
@@ -77,7 +78,7 @@ namespace Farming_session
 
 			TileObjectIndex = new List<int>();
 
-			CurrentGrid = new Grid(MapWidth, MapHeight);
+			BitMap = new int[map.Layers[0].Tiles.Count];
 
 			int nbLayers = map.Layers.Count;
 
@@ -104,8 +105,17 @@ namespace Farming_session
 					if (gid == 26) {
 						Rectangle a = new Rectangle(column * TileWidth, line * TileHeight, TileWidth, TileHeight);
 						LstCollision.Add(a);
-						CurrentGrid.BlockCell(new Position(column, line));
+						Console.WriteLine(nLayer);
 					}
+
+					if (nLayer == 2) {
+						BitMap[i] = 0;
+						if (gid == 26) {
+							BitMap[i] = 1;
+						}
+					}
+
+					Console.WriteLine(BitMap[i]);
 
 					column++;
 					if (column == MapWidth) {

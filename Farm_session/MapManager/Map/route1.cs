@@ -30,7 +30,7 @@ namespace Farming_session
 
 		public void SpawnEnemie()
 		{
-			enemieNumber = 5;
+			enemieNumber = 10;
 
 			while (enemieNumber > 0) {
 				for (int i = 200; i < TileMap.lstLayer[0].Count; i++) {
@@ -44,6 +44,9 @@ namespace Farming_session
 							Champiglu enemie = new Champiglu(EnemieData.Data["Champiglu"], Position, currentScene.myCharacter);
 							SceneGameplay.enemieManager.AddEnemie(enemie);
 							enemieNumber--;
+							if (enemieNumber == 0) {
+								break;
+							}
 						}
 					}
 				}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="7" height="8" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="120" columns="12">
+  <image source="../tileset.png" width="192" height="160"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="7" height="8">
+  <data encoding="csv">
+42,43,43,43,43,43,44,
+36,30,31,31,31,32,45,
+36,33,34,34,34,35,45,
+36,58,58,58,58,58,45,
+36,58,58,58,58,58,45,
+36,58,58,58,58,58,45,
+36,58,58,58,58,58,45,
+46,47,54,59,55,47,48
+</data>
+ </layer>
+ <layer name="Tile Layer 2" width="7" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,66,0,0,0,
+0,0,0,78,0,0,0,
+0,0,0,90,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Collision" width="7" height="8">
+  <data encoding="csv">
+26,26,26,26,26,26,26,
+26,26,26,26,26,26,26,
+26,0,0,26,0,0,26,
+26,0,0,26,0,0,26,
+26,0,0,0,0,0,26,
+26,0,0,0,0,0,26,
+26,0,0,0,0,0,26,
+26,26,26,0,26,26,26
+</data>
+ </layer>
+</map>

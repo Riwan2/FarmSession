@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>/home/riwan/Projects/Farming_session/Farming_session/Content/mainFont.spritefont</SourceFile>
+  <SourceTime>2019-09-11T12:02:43.1494595+02:00</SourceTime>
+  <DestFile>/home/riwan/Projects/Farming_session/Farming_session/Content/bin/DesktopGL/mainFont.xnb</DestFile>
+  <DestTime>2019-09-22T16:55:51.6145162+02:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2018-12-19T17:39:35.1718229+01:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2018-12-19T17:39:35.1718229+01:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

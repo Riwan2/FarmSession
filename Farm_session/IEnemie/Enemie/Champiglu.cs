@@ -16,7 +16,7 @@ namespace Farming_session
 		public int count;
 		//Base
 		public Vector2 spawnPosition;
-		public int RadiusVisionLength { get; private set; } = 150;
+		public int RadiusVisionLength { get; private set; } = 300;
 		//Attack
 		private float attackTimer = 0f;
 		private float attackTime = 0.8f;
@@ -27,6 +27,8 @@ namespace Farming_session
 
 		//Position[] Path;
 		//int PathIndex = 0;
+
+		BasicAI basicAI;
 
 		public Champiglu(Enemie pCopy, Vector2 pPosition, Hero pPlayer) : base(pCopy, pPlayer)
 		{
@@ -44,6 +46,8 @@ namespace Farming_session
 			CurrentSpeed = Speed;
 
 			spawnPosition = Position;
+
+			basicAI = new BasicAI(this, pPlayer);
 		}
 
 		public override void Update(GameTime gameTime)
@@ -51,7 +55,8 @@ namespace Farming_session
 			switch (CurrentState) {
 				case eState.idle:
 					inMovement = false;
-					if (util.getDistance(Position, Player.Position) < RadiusVisionLength) {
+					if (util.getDistance(Position, Player.Position) < RadiusVisionLength &&
+					    basicAI.CanSeePlayer) {
 						CurrentState = eState.walkTo;
 					}
 					break;
@@ -94,7 +99,8 @@ namespace Farming_session
 					
 				case eState.comeBack:
 					inMovement = true;
-					if (!(Position.X > spawnPosition.X - 10 && Position.X < spawnPosition.X + 10)) {
+					if (!(Position.X > spawnPosition.X - 1 && Position.X < spawnPosition.X + 1) && 
+					    !(Position.Y > spawnPosition.Y - 1 && Position.Y < spawnPosition.Y + 1)) {
 						float angle = util.getAngle(spawnPosition, Position);
 						Direction = new Vector2((float)Math.Cos(angle), (float)Math.Sin(angle));
 						Position += Direction * Speed;
@@ -123,13 +129,17 @@ namespace Farming_session
 
 			for (int i = 0; i < SceneGameplay.enemieManager.lstEnemies.Count;i++) {
 				Enemie friend = SceneGameplay.enemieManager.lstEnemies[i];
-				if (util.getDistance(Position, friend.Position) < RadiusVisionLength) {
+				if (util.getDistance(Position, friend.Position) < 100) {
 					if ((friend.CurrentState == Enemie.eState.attack ||
 						friend.CurrentState == Enemie.eState.walkTo) &&
-					    (CurrentState == eState.idle) && friend != this) {
+					    (CurrentState == eState.idle) && friend != this && basicAI.CanSeePlayer) {
 						Aggro();
 					}
 				}
+			}
+
+			if (util.getDistance(Position, Player.Position) < MainGame.ScreenWidth) {
+				basicAI.Update(gameTime);
 			}
 
 			base.Update(gameTime);
@@ -137,6 +147,7 @@ namespace Farming_session
 
 		public override void Draw(SpriteBatch spriteBatch)
 		{
+			basicAI.Draw(spriteBatch);
 			base.Draw(spriteBatch);
 		}
 	}

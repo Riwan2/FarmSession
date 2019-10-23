@@ -90,5 +90,11 @@ namespace Farming_session
 			int d = (int)((a.X - b.X) * (a.X - b.X) + (a.Y - b.Y) * (a.Y - b.Y));
 			return (int)(Math.Sqrt(d));
 		}
+
+		public static int getHeuristic(Point a, Point b)
+		{
+			//Manhattan distance on a square grid
+			return Math.Abs(a.X - b.X) + Math.Abs(a.Y - b.Y);
+		}
 	}
 }

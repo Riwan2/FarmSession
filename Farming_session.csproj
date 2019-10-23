@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{377D679F-45FB-490B-A264-B9AE54BE71A0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Farming_session</RootNamespace>
+    <AssemblyName>Farming_session</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MonoGamePlatform>DesktopGL</MonoGamePlatform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="RoyT.AStar">
+      <HintPath>..\packages\RoyT.AStar.2.1.0\lib\netstandard1.0\RoyT.AStar.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Farm_session\Game_Manager\MainGame.cs" />
+    <Compile Include="Farm_session\Game_Manager\GameState.cs" />
+    <Compile Include="Farm_session\Game_Manager\Scene.cs" />
+    <Compile Include="Farm_session\Game_Manager\SceneMenu.cs" />
+    <Compile Include="Farm_session\Static class\AssetManager.cs" />
+    <Compile Include="Farm_session\Static class\util.cs" />
+    <Compile Include="Farm_session\GUI\Button.cs" />
+    <Compile Include="Farm_session\Sprite\Sprite.cs" />
+    <Compile Include="Farm_session\Sprite\AnimatedSprite.cs" />
+    <Compile Include="Farm_session\MapEngine\TileMap.cs" />
+    <Compile Include="Farm_session\GUI\GameplayOutput.cs" />
+    <Compile Include="Farm_session\GUI\OverlayOptionMenu.cs" />
+    <Compile Include="Farm_session\GUI\GUIElement.cs" />
+    <Compile Include="Farm_session\Sprite\IActor.cs" />
+    <Compile Include="Farm_session\Item\Item.cs" />
+    <Compile Include="Farm_session\GUI\Overlay.cs" />
+    <Compile Include="Farm_session\GUI\OverlayInventory.cs" />
+    <Compile Include="Farm_session\Item\InventoryManager.cs" />
+    <Compile Include="Farm_session\Item\ItemTexture.cs" />
+    <Compile Include="Farm_session\Item\InventoryIcon.cs" />
+    <Compile Include="Farm_session\Item\ItemBar.cs" />
+    <Compile Include="Farm_session\MapEngine\TileObject\Crop.cs" />
+    <Compile Include="Farm_session\MapEngine\TileObject\TileObject.cs" />
+    <Compile Include="Farm_session\Shader\LightShader.cs" />
+    <Compile Include="Farm_session\MapEngine\BuildMode\BuildMode.cs" />
+    <Compile Include="Farm_session\MapEngine\BuildMode\Selector.cs" />
+    <Compile Include="Farm_session\MapEngine\BuildMode\TileSelector.cs" />
+    <Compile Include="Farm_session\Game_Manager\Gameplay\SceneGameplay.cs" />
+    <Compile Include="Farm_session\Game_Manager\Gameplay\TimeManager.cs" />
+    <Compile Include="Farm_session\MapEngine\TileObject\CropData.cs" />
+    <Compile Include="Farm_session\Save\MapFile.cs" />
+    <Compile Include="Farm_session\Save\GameFile.cs" />
+    <Compile Include="Farm_session\Camera\Camera.cs" />
+    <Compile Include="Farm_session\Particle\Particle.cs" />
+    <Compile Include="Farm_session\Particle\ParticleEngine.cs" />
+    <Compile Include="Farm_session\Particle\ParticleSystem.cs" />
+    <Compile Include="Farm_session\IPlayer\Spell\SpellManager.cs" />
+    <Compile Include="Farm_session\TiledSharp\src\Group.cs" />
+    <Compile Include="Farm_session\TiledSharp\src\ImageLayer.cs" />
+    <Compile Include="Farm_session\TiledSharp\src\Layer.cs" />
+    <Compile Include="Farm_session\TiledSharp\src\Map.cs" />
+    <Compile Include="Farm_session\TiledSharp\src\ObjectGroup.cs" />
+    <Compile Include="Farm_session\TiledSharp\src\TiledCore.cs" />
+    <Compile Include="Farm_session\TiledSharp\src\Tileset.cs" />
+    <Compile Include="Farm_session\MapManager\Map.cs" />
+    <Compile Include="Farm_session\MapManager\Map\PlayerLevel.cs" />
+    <Compile Include="Farm_session\MapManager\Map\house.cs" />
+    <Compile Include="Farm_session\MapManager\Map\route1.cs" />
+    <Compile Include="Farm_session\MapManager\MapManager.cs" />
+    <Compile Include="Farm_session\IEnemie\Enemie.cs" />
+    <Compile Include="Farm_session\IEnemie\Enemie\Champiglu.cs" />
+    <Compile Include="Farm_session\IEnemie\EnemieManager.cs" />
+    <Compile Include="Farm_session\MapManager\Map\level1.cs" />
+    <Compile Include="Farm_session\IPlayer\Spell\OffensiveSpell\OffensiveSpell.cs" />
+    <Compile Include="Farm_session\IPlayer\Spell\PassivSpell\PassivSpell.cs" />
+    <Compile Include="Farm_session\IPlayer\Spell\PassivSpell\WaterCropsSpell.cs" />
+    <Compile Include="Farm_session\IPlayer\Spell\OffensiveSpell\BasicAttackSpell.cs" />
+    <Compile Include="Farm_session\IPlayer\Player\Hero.cs" />
+    <Compile Include="Farm_session\IPlayer\Player\HeroTileSelect.cs" />
+    <Compile Include="Farm_session\IPlayer\Player\HeroSpellSelector.cs" />
+    <Compile Include="Farm_session\IPlayer\Spell\Spell.cs" />
+    <Compile Include="Farm_session\Game_Manager\Gameplay\LayerManager.cs" />
+    <Compile Include="Farm_session\GUI\EnemieOutput.cs" />
+    <Compile Include="Farm_session\Primitve\Primitive.cs" />
+    <Compile Include="Farm_session\PathFinding\PathFinding.cs" />
+    <Compile Include="Farm_session\IEnemie\BasicAI.cs" />
+    <Compile Include="Farm_session\Game_Manager\SceneTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon.png" />
+    <None Include="bin\Debug\Content\level\PlayerLevel.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Farm_session\TiledSharp\src\TiledSharp.netcore.csproj" />
+    <None Include="Farm_session\TiledSharp\TiledSharp.csproj" />
+    <None Include="Farm_session\TiledSharp\TiledSharp.nuspec" />
+    <None Include="Content\level\route1.tmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="x64\libopenal.so.1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\soft_oal.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\libSDL2-2.0.so.0">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\SDL2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\libopenal.so.1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\soft_oal.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\libSDL2-2.0.so.0">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SDL2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MonoGame.Framework.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libopenal.1.dylib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libSDL2-2.0.0.dylib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\level\house.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\level\level1.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Farm_session\" />
+    <Folder Include="Farm_session\Game_Manager\" />
+    <Folder Include="Farm_session\Static class\" />
+    <Folder Include="Farm_session\GUI\" />
+    <Folder Include="Farm_session\Sprite\" />
+    <Folder Include="Farm_session\MapEngine\" />
+    <Folder Include="Content\level\" />
+    <Folder Include="Farm_session\IPlayer\" />
+    <Folder Include="Farm_session\Item\" />
+    <Folder Include="Farm_session\Shader\" />
+    <Folder Include="Farm_session\MapEngine\TileObject\" />
+    <Folder Include="Farm_session\MapEngine\BuildMode\" />
+    <Folder Include="Farm_session\Game_Manager\Gameplay\" />
+    <Folder Include="Farm_session\Save\" />
+    <Folder Include="Farm_session\Camera\" />
+    <Folder Include="Farm_session\Particle\" />
+    <Folder Include="Farm_session\IPlayer\Spell\" />
+    <Folder Include="Farm_session\TiledSharp\" />
+    <Folder Include="Farm_session\MapManager\" />
+    <Folder Include="Farm_session\MapManager\Map\" />
+    <Folder Include="Farm_session\IEnemie\" />
+    <Folder Include="Farm_session\IEnemie\Enemie\" />
+    <Folder Include="Farm_session\IPlayer\Spell\OffensiveSpell\" />
+    <Folder Include="Farm_session\IPlayer\Spell\PassivSpell\" />
+    <Folder Include="Farm_session\IPlayer\Player\" />
+    <Folder Include="Farm_session\Primitve\" />
+    <Folder Include="Farm_session\PathFinding\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <TextStylePolicy FileWidth="80" TabWidth="8" TabsToSpaces="False" IndentWidth="8" RemoveTrailingWhitespace="True" NoTabsAfterNonTabs="False" EolMarker="Native" inheritsSet="Mono" inheritsScope="text/plain" scope="text/plain" />
+          <XmlFormattingPolicy inheritsSet="Mono" inheritsScope="application/xml" scope="application/xml">
+            <DefaultFormat OmitXmlDeclaration="False" NewLineChars="&#xA;" IndentContent="True" ContentIndentString="&#x9;" AttributesInNewLine="False" MaxAttributesPerLine="10" AttributesIndentString="&#x9;" WrapAttributes="False" AlignAttributes="False" AlignAttributeValues="False" QuoteChar="&quot;" SpacesBeforeAssignment="0" SpacesAfterAssignment="0" EmptyLinesBeforeStart="0" EmptyLinesAfterStart="0" EmptyLinesBeforeEnd="0" EmptyLinesAfterEnd="0" />
+          </XmlFormattingPolicy>
+          <CSharpFormattingPolicy IndentBlock="True" IndentBraces="False" IndentSwitchCaseSection="True" LabelPositioning="OneLess" NewLinesForBracesInTypes="True" NewLinesForBracesInMethods="True" NewLinesForBracesInProperties="False" NewLinesForBracesInAccessors="False" NewLinesForBracesInAnonymousMethods="False" NewLinesForBracesInControlBlocks="False" NewLinesForBracesInAnonymousTypes="False" NewLinesForBracesInObjectCollectionArrayInitializers="False" NewLinesForBracesInLambdaExpressionBody="False" NewLineForElse="False" NewLineForCatch="False" NewLineForFinally="False" NewLineForMembersInObjectInit="False" NewLineForMembersInAnonymousTypes="False" NewLineForClausesInQuery="False" SpaceWithinMethodDeclarationParenthesis="False" SpaceBetweenEmptyMethodDeclarationParentheses="False" SpaceWithinMethodCallParentheses="False" SpaceBetweenEmptyMethodCallParentheses="False" SpaceAfterControlFlowStatementKeyword="True" SpaceWithinExpressionParentheses="False" SpaceWithinCastParentheses="False" SpaceWithinOtherParentheses="False" SpaceAfterCast="False" SpacesIgnoreAroundVariableDeclaration="False" SpaceBetweenEmptySquareBrackets="False" SpaceWithinSquareBrackets="False" SpaceAfterColonInBaseTypeDeclaration="True" SpaceAfterComma="True" SpaceAfterDot="False" SpaceAfterSemicolonsInForStatement="True" SpaceBeforeColonInBaseTypeDeclaration="True" SpaceBeforeComma="False" SpaceBeforeDot="False" SpaceBeforeSemicolonsInForStatement="False" SpacingAroundBinaryOperator="Single" WrappingPreserveSingleLine="True" WrappingKeepStatementsOnSingleLine="True" PlaceSystemDirectiveFirst="True" IndentSwitchSection="True" SpacingAfterMethodDeclarationName="False" SpaceAfterMethodCallName="False" SpaceBeforeOpenSquareBracket="False" inheritsSet="Mono" inheritsScope="text/x-csharp" scope="text/x-csharp" />
+          <NameConventionPolicy>
+            <Rules>
+              <NamingRule Name="Namespaces" AffectedEntity="Namespace" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Types" AffectedEntity="Class, Struct, Enum, Delegate" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Interfaces" AffectedEntity="Interface" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True">
+                <RequiredPrefixes>
+                  <String>I</String>
+                </RequiredPrefixes>
+              </NamingRule>
+              <NamingRule Name="Attributes" AffectedEntity="CustomAttributes" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True">
+                <RequiredSuffixes>
+                  <String>Attribute</String>
+                </RequiredSuffixes>
+              </NamingRule>
+              <NamingRule Name="Event Arguments" AffectedEntity="CustomEventArgs" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True">
+                <RequiredSuffixes>
+                  <String>EventArgs</String>
+                </RequiredSuffixes>
+              </NamingRule>
+              <NamingRule Name="Exceptions" AffectedEntity="CustomExceptions" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True">
+                <RequiredSuffixes>
+                  <String>Exception</String>
+                </RequiredSuffixes>
+              </NamingRule>
+              <NamingRule Name="Methods" AffectedEntity="Methods" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Static Readonly Fields" AffectedEntity="ReadonlyField" VisibilityMask="Internal, Protected, Public" NamingStyle="PascalCase" IncludeInstanceMembers="False" IncludeStaticEntities="True" />
+              <NamingRule Name="Fields (Non Private)" AffectedEntity="Field" VisibilityMask="Internal, Protected, Public" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="ReadOnly Fields (Non Private)" AffectedEntity="ReadonlyField" VisibilityMask="Internal, Protected, Public" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="False" />
+              <NamingRule Name="Fields (Private)" AffectedEntity="Field, ReadonlyField" VisibilityMask="Private" NamingStyle="CamelCase" IncludeInstanceMembers="True" IncludeStaticEntities="False">
+                <AllowedPrefixes>
+                  <String>_</String>
+                  <String>m_</String>
+                </AllowedPrefixes>
+              </NamingRule>
+              <NamingRule Name="Static Fields (Private)" AffectedEntity="Field" VisibilityMask="Private" NamingStyle="CamelCase" IncludeInstanceMembers="False" IncludeStaticEntities="True" />
+              <NamingRule Name="ReadOnly Fields (Private)" AffectedEntity="ReadonlyField" VisibilityMask="Private" NamingStyle="CamelCase" IncludeInstanceMembers="True" IncludeStaticEntities="False">
+                <AllowedPrefixes>
+                  <String>_</String>
+                  <String>m_</String>
+                </AllowedPrefixes>
+              </NamingRule>
+              <NamingRule Name="Constant Fields" AffectedEntity="ConstantField" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Properties" AffectedEntity="Property" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Events" AffectedEntity="Event" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Enum Members" AffectedEntity="EnumMember" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Parameters" AffectedEntity="Parameter" VisibilityMask="VisibilityMask" NamingStyle="CamelCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
+              <NamingRule Name="Type Parameters" AffectedEntity="TypeParameter" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True">
+                <RequiredPrefixes>
+                  <String>T</String>
+                </RequiredPrefixes>
+              </NamingRule>
+            </Rules>
+          </NameConventionPolicy>
+          <TextStylePolicy TabWidth="4" TabsToSpaces="True" IndentWidth="4" RemoveTrailingWhitespace="True" EolMarker="Native" FileWidth="120" NoTabsAfterNonTabs="True" inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/x-fsharp" />
+          <TextStylePolicy TabWidth="4" IndentWidth="4" RemoveTrailingWhitespace="True" NoTabsAfterNonTabs="False" FileWidth="120" TabsToSpaces="False" EolMarker="Unix" inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/x-csharp" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>

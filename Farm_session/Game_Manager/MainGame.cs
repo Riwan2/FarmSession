@@ -49,8 +49,8 @@ namespace Farming_session
 
 			//TODO: use this.Content to load your game content here 
 
-			AssetManager.Load(Content);
-			gameState.ChangeScene(GameState.SceneType.Menu);
+			AssetManager.Load(this);
+			gameState.ChangeScene(GameState.SceneType.Test);
 		}
 
 		protected override void Update(GameTime gameTime)

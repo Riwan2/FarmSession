@@ -6,7 +6,8 @@ namespace Farming_session
 		public enum SceneType
 		{
 			Menu,
-			Gameplay
+			Gameplay,
+			Test,
 		}
 
 		protected MainGame mainGame;
@@ -30,6 +31,9 @@ namespace Farming_session
 					break;
 				case SceneType.Gameplay:
 					currentScene = new SceneGameplay(mainGame);
+					break;
+				case SceneType.Test:
+					currentScene = new SceneTest(mainGame);
 					break;
 				default:
 					break;

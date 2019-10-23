@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/mainFont.spritefont</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/tileset.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/PlayButton.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Selector.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/tilesetSelector.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/PlayerSelector.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/button.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/playerItemBar.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/GUI/background.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/GUI/slot.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/GUI/slotSelected.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/GUI/scythe.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/GUI/wheatItem.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/GUI/wheatSeed.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Shader/FirstShader.fx</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/WhiteLightCircle.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Particle/RoundParticle.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Shadow.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Player/HeroWalk_left.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Player/HeroWalk_down.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Player/HeroWalk_up.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Player/HeroWalk_right.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Player/MageBaton.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/GUI/MageBatonGUI.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Player/HeroWalk_down_baton.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Player/HeroWalk_left_baton.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Player/HeroWalk_right_baton.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Player/HeroWalk_up_baton.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Particle/SquareParticle.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Monster/MushroomAttack.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Monster/MushroomWalk.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Particle/ProjectileParticle.png</File>
+    <File>/home/riwan/Projects/Farming_session/Farming_session/Content/Shader/ProjectileBloom.fx</File>
+  </SourceFiles>
+</SourceFileCollection>

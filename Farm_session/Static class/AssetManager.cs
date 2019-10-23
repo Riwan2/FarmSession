@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -16,8 +17,12 @@ namespace Farming_session
 		//Shader
 		public static Effect ProjectileBloomEffect;
 
-		public static void Load(ContentManager pContent)
+		//Basic Point
+		public static Texture2D PointTexture;
+
+		public static void Load(MainGame mainGame)
 		{
+			ContentManager pContent = mainGame.Content;
 			MainFont = pContent.Load<SpriteFont>("mainFont");
 
 			ItemTexture = new Dictionary<string, Texture2D>()
@@ -28,6 +33,9 @@ namespace Farming_session
 			};
 
 			ProjectileBloomEffect = pContent.Load<Effect>("Shader/ProjectileBloom");
+
+			PointTexture = new Texture2D(mainGame.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+			PointTexture.SetData(new[] { Color.White });
 		}
 
 		public static Texture2D getItemTexture(string item)

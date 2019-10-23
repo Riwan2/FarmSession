@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>/home/riwan/Projects/Farming_session/Farming_session/Content/Shader/ProjectileBloom.fx</SourceFile>
+  <SourceTime>2019-10-16T13:16:41.7003423+02:00</SourceTime>
+  <DestFile>/home/riwan/Projects/Farming_session/Farming_session/Content/bin/Windows/Shader/ProjectileBloom.xnb</DestFile>
+  <DestTime>2019-10-16T13:16:48.0523276+02:00</DestTime>
+  <Importer>EffectImporter</Importer>
+  <ImporterTime>2018-12-19T17:39:35.1718229+01:00</ImporterTime>
+  <Processor>RemoteEffectProcessor</Processor>
+  <ProcessorTime>2018-02-14T12:02:06+01:00</ProcessorTime>
+  <Parameters>
+    <Key>RemoteAddress</Key>
+    <Value>pipeline.infinitespace-studios.co.uk</Value>
+  </Parameters>
+  <Parameters>
+    <Key>RemotePort</Key>
+    <Value>443</Value>
+  </Parameters>
+  <Parameters>
+    <Key>Protocol</Key>
+    <Value>https</Value>
+  </Parameters>
+  <Parameters>
+    <Key>DebugMode</Key>
+    <Value>Auto</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

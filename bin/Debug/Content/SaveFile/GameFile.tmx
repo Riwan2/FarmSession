@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<XmlGameFile>
+  <playerFile>
+    <PosX>917.5801</PosX>
+    <PosY>648.7604</PosY>
+  </playerFile>
+  <gameInfo>
+    <Time>22</Time>
+    <CurrentMap>route1</CurrentMap>
+  </gameInfo>
+  <inventoryFile>
+    <Item index="0">
+      <ID>SCYTHE</ID>
+      <Slot>0</Slot>
+    </Item>
+    <Item index="1">
+      <ID>BASEBATON</ID>
+      <Slot>1</Slot>
+    </Item>
+  </inventoryFile>
+</XmlGameFile>
